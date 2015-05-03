@@ -1,0 +1,4 @@
+[package]
+name = "micro"
+version = "0.1.0"
+authors = ["Michael Pratt <michael@pratt.im>"]
