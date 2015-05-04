@@ -27,8 +27,3 @@ extern fn eh_personality() {}
 pub fn panic_fmt(_fmt: &Arguments, _file_line: &(&'static str, usize)) -> ! {
   loop { }
 }
-
-#[no_mangle]
-pub extern fn __morestack() {
-    unsafe { core::intrinsics::abort(); }
-}

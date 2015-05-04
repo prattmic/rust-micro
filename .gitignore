@@ -3,4 +3,5 @@ Cargo.lock
 *.o
 *.ll
 *.s
+*.rlib
 main
