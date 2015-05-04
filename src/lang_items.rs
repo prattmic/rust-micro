@@ -14,3 +14,7 @@ extern fn eh_personality() {}
 pub fn panic_fmt(_fmt: &Arguments, _file_line: &(&'static str, usize)) -> ! {
   loop { }
 }
+
+// Shouldn't be called
+#[no_mangle]
+pub extern fn __aeabi_unwind_cpp_pr0() { }
