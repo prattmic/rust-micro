@@ -12,7 +12,7 @@ EXTRA_SRCS := src/lang_items.rs
 all: main
 
 main: $(MOD)
-	$(CC) -T stm32f4.ld -nostdlib -ffreestanding -o $@ $^
+	$(CC) -static -T stm32f4.ld -nostdlib -ffreestanding -o $@ src/errno.c $^ libcore.rlib -lgcc -lm -lgcc /home/prattmic/prog/opensource/rust-git/src/compiler-rt/triple/builtins/libcompiler_rt.a
 
 rust/src/libcore/lib.rs:
 	git submodule init

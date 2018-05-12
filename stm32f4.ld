@@ -80,6 +80,15 @@ SECTIONS {
         . = ALIGN(4);
         _ebss = .;         /* define a global symbol at bss end */
     } > CCMRAM
+
+    /* FIXME: someone might actually want these... */
+    __exidx_start = .;
+    __exidx_end = .;
+
+    /DISCARD/ :
+    {
+        *(.ARM.exidx*)
+    }
 }
 
 PROVIDE(end = .);
